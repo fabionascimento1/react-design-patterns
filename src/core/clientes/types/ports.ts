@@ -1,7 +1,7 @@
 import { FilterRequestDTO, GetListRequestDTO } from "core/shared/types";
-import { GetClienteRequestDTO, GetClientesResponseDTO } from "./dto";
+import { GetClienteRequestDTO, GetClienteResponseDTO, GetClientesResponseDTO } from "./dto";
 
-export interface iHttpClient {
+export interface IHttpClient {
   list(dto: GetListRequestDTO, filterDTO?: FilterRequestDTO): Promise<GetClientesResponseDTO>
-  get(dto: GetListRequestDTO): Promise<GetClienteRequestDTO>
+  get(dto: GetClienteRequestDTO): Promise<GetClienteResponseDTO>
 }
